@@ -34,17 +34,35 @@
           <br>
           <button @click="showDiplo">Diploma project at the TGM</button>
           <hr>
+          <button @click="showCalc">Calculator programmed with Vue.js</button>
+          <hr>
           <transition name="calculator">
             <img
-            src="~/assets/Vue_Calculator.png"
+            src="~/assets/Robotic_vacuum_cleaner.png"
             class="img-responsive"
             style="width:50%;margin:auto;"
             alt="Image"
-            v-if="openCalc"
-            >          
+            v-if="openRobot"
+            >         
           </transition>
           <br>
-          <button @click="showCalc">A Calculator programmed with Vue.js</button>
+          <button @click="showRobot">Robotic vacuum cleaner ROS Program</button>
+          <hr>
+          <transition-group name="calculator">
+            <img
+            src="~/assets/monsterVsHero.png"
+            class="img-responsive"
+            style="width:100%;margin:auto;cursor:pointer;"
+            alt="Image of Hero vs Monster Game"
+            v-if="openGameHero"
+            @click="goToHeroGame"
+            :key="1"
+            >
+            <a href="https://github.com/Nezir66/Monster_vs_Hero.git" v-if="openGameHero" :key="1"><i class="fa fa-github" style="transform: scale(2);"></i></a>  
+          </transition-group>
+          <br><br>
+          <button @click="showGameHero">Monster vs Hero Program</button>
+          <br>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
       </div>
@@ -61,7 +79,8 @@ export default {
   data() {
     return {
       openDiplo: false,
-      openCalc: false
+      openRobot: false,
+      openGameHero: false,
     }
   },
   methods: {
@@ -69,7 +88,16 @@ export default {
       this.openDiplo = !this.openDiplo;
     },
     showCalc(){
-      this.openCalc = !this.openCalc;
+      this.$router.push('/demoProject/calculator')
+    },
+    showRobot(){
+      this.openRobot = !this.openRobot;
+    },
+    showGameHero(){
+      this.openGameHero = !this.openGameHero;
+    },
+    goToHeroGame(){
+      this.$router.push('/demoProject/monsterVsHero')
     }
   }
 }

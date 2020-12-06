@@ -16,8 +16,9 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" }
+      { rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" },
+      { rel:"stylesheet", href:"/css/all.css" },
+      { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"}
     ]
   },
 
@@ -36,14 +37,15 @@ export default {
   buildModules: [
   ],
 
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-        // Simple usage
-        '@nuxtjs/vuetify',
+    // Simple usage
+    '@nuxtjs/vuetify',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
