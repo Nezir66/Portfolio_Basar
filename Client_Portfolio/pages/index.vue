@@ -86,10 +86,7 @@
                 <a class="demo" @click="goToHeroGame">Demo</a>
               </div>
               <div class="sidenav">
-                <img
-                  src="~/assets/monsterVsHero.png"
-                  height="277"
-                />
+                <img src="~/assets/monsterVsHero.png" height="277" />
               </div>
             </div>
             <hr />
@@ -135,8 +132,9 @@
               <div class="content col p-4 d-flex flex-column position-static">
                 <h2>Diploma project at the TGM</h2>
                 <p>
-                  My diploma project made together with two other colleges. 
-                  Realization of an "ideal" smart home by combining different smart home systems.
+                  My diploma project made together with two other colleges.
+                  Realization of an "ideal" smart home by combining different
+                  smart home systems.
                 </p>
                 <a class="demo" @click="goToDiplo">PDF</a>
               </div>
@@ -164,8 +162,7 @@
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     goToCalc() {
@@ -174,9 +171,9 @@ export default {
     goToHeroGame() {
       this.$router.push("/demoProject/monsterVsHero");
     },
-    goToDiplo(){
+    goToDiplo() {
       this.$router.push("/demoProject/diplomaProject");
-    }
+    },
   },
 };
 </script>

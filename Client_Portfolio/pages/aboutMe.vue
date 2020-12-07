@@ -1,18 +1,24 @@
 <template>
   <div class="body">
     <ul>
-      <li style="border-top-right-radius: 30px;"><a href="/">Home</a></li>
+      <li style="border-top-right-radius: 30px"><a href="/">Home</a></li>
       <li><a href="/news" class="active">About Me</a></li>
       <li
-        style="border-bottom-left-radius: 30px;border-top-right-radius: 30px;border-bottom-right-radius: 0;"
+        style="
+          border-bottom-left-radius: 30px;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 0;
+        "
       >
         <a href="/contact">Contact</a>
       </li>
       <li>
-        <a href="/aboutMe" class="active" style="border-top-right-radius:0;">&nbsp;</a>
+        <a href="/aboutMe" class="active" style="border-top-right-radius: 0"
+          >&nbsp;</a
+        >
       </li>
     </ul>
-    <br><br>
+    <br /><br />
     <footer class="container-fluid text-center">
       <p>Footer Text</p>
     </footer>
@@ -20,12 +26,12 @@
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      space: ''
-    }
-  }
-}
+      space: "",
+    };
+  },
+};
 </script>
 <style scoped>
 .body {
@@ -34,7 +40,7 @@ export default {
   font-size: 20px;
 }
 footer {
-  background-color:#A47E3C;
+  background-color: #a47e3c;
   padding: 25px;
 }
 ul {
@@ -42,7 +48,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#A47E3C;
+  background-color: #a47e3c;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -50,7 +56,7 @@ ul {
 
 li {
   float: left;
-  background-color: #F3E4CA;
+  background-color: #f3e4ca;
 }
 
 li a {
@@ -62,7 +68,7 @@ li a {
 }
 
 .active {
-  background-color: #A47E3C;
+  background-color: #a47e3c;
   border-radius: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 0;
