@@ -1,6 +1,6 @@
 <template>
-    <div style="text-align: center;">
-        <h3 style="float:left; margin:20px;"><a href="/">Back</a></h3>
+    <div style="text-align: center; padding: 5%">
+        <a href="/" style="float:left; margin: -3%; color:black;transform:scale(3);"><i class="fa fa-home"></i></a>
         <transition-group name="slide" mode="in-out" >
             <section class="row" key="player">
                 <div class="small-6 columns">
@@ -42,7 +42,7 @@
                 <div class="small-12 columns">
                     <ul >
                         <transition-group name="fade" mode="in-out">
-                        <li v-for="(turn,i) in turns" :class="{'player-turn': turn.isHero, 'monster-turn': turn.isMonster}" :key="i"> 
+                        <li v-for="turn in turns" :class="{'player-turn': turn.isHero, 'monster-turn': turn.isMonster}" :key="turn"> 
                             {{ turn.damage }}
                         </li>
                     </transition-group>

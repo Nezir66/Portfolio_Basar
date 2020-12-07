@@ -1,5 +1,6 @@
 <template>
-<body>
+<div class="body">
+    <a href="/" style="float:left; margin:-3%; color:black;transform:scale(3);"><i class="fa fa-home"></i></a>
     <div class='calculator' onselectstart='return false'>
     <div class='display'>{{display}}</div>
     <div @click='clear' class='button darker'>C</div>
@@ -23,7 +24,7 @@
     <div @click='sign' class='button darker'>+/-</div>
     <div @click='equal' class='button operator button-bottom'>=</div>
   </div>
-</body>
+</div>
 </template>
 
 <script>
@@ -109,22 +110,24 @@ export default {
 </script>
 
 <style scoped>
-body {
+.body {
   font-family: 'Franklin Gothic Medium', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #111;
-  margin: 20% auto;
+  margin: auto;
+  z-index: 1;
+  padding: 5%;
 }
 
 @media only screen and (min-width: 768px) {
-  body {
-    margin: 5% auto;
+  .body {
+    margin: auto;
   }
 }
 .calculator {
-  margin: 0 auto;
+  margin: auto;
   width: 80vw;
   font-size: 2rem;
   display: grid;

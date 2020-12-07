@@ -1,0 +1,6 @@
+<template>
+    <div style="padding:100px; padding-left:20%;">
+        <a href="/" style="float:left; margin-left: -23%; margin-top: -4%; color:black;transform:scale(3);"><i class="fa fa-home"></i></a>
+            <img src="~/assets/Plakat-1.png" alt="Diploma Project PDF" width="1200" height="1500">
+    </div>
+</template>
