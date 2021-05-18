@@ -1,10 +1,10 @@
 <template>
   <div style="text-align: center; padding: 5%">
-    <a
-      href="/"
+    <nuxt-link
+      to="/"
       style="float: left; margin: -3%; color: black; transform: scale(3)"
       ><i class="fa fa-home"></i
-    ></a>
+    ></nuxt-link>
     <transition-group name="slide" mode="in-out">
       <section class="row" key="player">
         <div class="small-6 columns">

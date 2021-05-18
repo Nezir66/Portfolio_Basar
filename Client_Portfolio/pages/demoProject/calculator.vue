@@ -1,10 +1,10 @@
 <template>
   <div class="body">
-    <a
-      href="/"
+    <nuxt-link
+      to="/"
       style="float: left; margin: -3%; color: black; transform: scale(3)"
       ><i class="fa fa-home"></i
-    ></a>
+    ></nuxt-link>
     <div class="calculator" onselectstart="return false">
       <div class="display">{{ display }}</div>
       <div @click="clear" class="button darker">C</div>

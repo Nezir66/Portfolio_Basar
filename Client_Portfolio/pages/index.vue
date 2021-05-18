@@ -7,12 +7,12 @@
       </div>
     </div>
     <ul class="pushFor">
-      <li><a class="active" href="/">Home</a></li>
+      <li><nuxt-link class="active" to="/">Home</nuxt-link></li>
       <li style="border-radius: 0; border-bottom-left-radius: 30px">
-        <a href="/aboutMe">About Me</a>
+        <nuxt-link to="/aboutMe">About Me</nuxt-link>
       </li>
       <li style="border-top-right-radius: 30px; border-bottom-right-radius: 0">
-        <a href="/contact">Contact</a>
+        <nuxt-link to="/contact">Contact</nuxt-link>
       </li>
       <li>
         <a
@@ -25,11 +25,40 @@
     </ul>
     <br />
     <div class="container-fluid bg-3 text-center pushBack">
-      <h2>Some of my Work</h2>
+      <h2>Some of my work</h2>
       <br />
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="content col p-4 d-flex flex-column position-static">
+                <h2>Accessible Hookah Web-Shop</h2>
+                <p>
+                  Accesible hookah delivery service web-shop with additional game functions. On the website, potential customers, with or without physical restrictions, can order a shisha on the one hand and special drinks on the other.  
+                </p>
+                <a href="https://github.com/Nezir66/Bachelor_Project_Shisha_at_Home"
+                  ><i
+                    class="fa fa-github"
+                    style="
+                      transform: scale(2);
+                      color: #a47e3c;
+                      margin-left: 2%;
+                      position: relative;
+                    "
+                  ></i
+                ></a>
+                <a class="demo" href="https://www.google.com/">Demo</a>
+              </div>
+              <div class="sidenav">
+                <img src="~/assets/shisha@home.png" height="277" />
+              </div>
+            </div>
+            <hr />
+          </div>
+          <br />
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div
               class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
@@ -152,7 +181,6 @@
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
       </div>
     </div>
-    <br /><br />
     <footer class="container-fluid text-center">
       <p>Footer Text</p>
     </footer>
@@ -191,19 +219,10 @@ footer {
 
 .body {
   background-color: white;
+  color: #a47e3c;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-}
-
-.hero-image {
-  background-image: url("https://images.unsplash.com/photo-1507372953381-f69d9aeac620?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 .hero-text {
@@ -212,7 +231,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: #a47e3c;
   text-shadow: 2px 2px 5px white;
 }
 ul {
@@ -233,7 +252,7 @@ li {
 
 li a {
   display: block;
-  color: black;
+  color: #a47e3c;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -241,6 +260,7 @@ li a {
 
 .active {
   background-color: #a47e3c;
+  color: #f3e4ca;
   border-radius: 0;
   border-top-right-radius: 30px;
 }

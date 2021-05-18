@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid body">
     <ul class="pushFor">
-      <li><a href="/">Home</a></li>
+      <li><nuxt-link to="/">Home</nuxt-link></li>
       <li style="border-top-right-radius: 30px">
-        <a href="/aboutMe">About Me</a>
+        <nuxt-link to="/aboutMe">About Me</nuxt-link>
       </li>
       <li>
-        <a href="/contact" class="active">Contact</a>
+        <nuxt-link to="/contact" class="active">Contact</nuxt-link>
       </li>
     </ul>
     <div class="row" style="height: 50px"></div>
@@ -17,6 +17,7 @@
           <h2>Contact Me</h2>
           <p>Please leave me a message</p>
         </div>
+        <hr>
         <div class="row pushBack">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <img
@@ -32,6 +33,7 @@
                 id="fname"
                 name="firstname"
                 placeholder="Your name.."
+                v-model="firstName"
               />
               <label for="lname">Last Name</label>
               <input
@@ -39,39 +41,47 @@
                 id="lname"
                 name="lastname"
                 placeholder="Your last name.."
+                v-model="lastName"
               />
               <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="australia">Austria</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                placeholder="Country.."
+                v-model="country"
+              />
               <label for="subject">Subject</label>
               <textarea
                 id="subject"
                 name="subject"
                 placeholder="Write something.."
                 style="height: 170px"
+                v-model="subject"
               ></textarea>
-              <input type="submit" value="Submit" />
+              <a class="mailtoui" type="submit" value="Submit" :href="'mailto:nezirbasar@outlook.com?subject=Message%20from%20'+firstName+'%20'+lastName+'%20(Country:%20'+country+')'+'&body='+subject">Submit</a>
             </form>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
     </div>
-    <br /><br />
-    <footer class="container-fluid text-center">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <p>Footer Text</p>
-        </div>
-      </div>
-    </footer>
+      <footer>
+        <br><br>
+      </footer>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      country: "",
+      subject: "",
+    }
+  },
+};
 </script>
 <style scoped>
 .body {
@@ -79,6 +89,12 @@ export default {};
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #a47e3c;
+  padding: 25px;
 }
 
 ul {
@@ -100,20 +116,21 @@ li {
 li a {
   display: block;
   text-align: center;
-  color: black;
+  color: #a47e3c;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .active {
   background-color: #a47e3c;
-
+  color: #f3e4ca;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-input[type="text"],
+a[type="text"],
+input,
 select,
 textarea {
   width: 100%;
@@ -122,23 +139,29 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  color: #a47e3c;
+  background-color: #f3e4ca;
 }
 
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+a[type="submit"] {
+  background-color: #f3e4ca;
+  color: #a47e3c;
   padding: 12px 20px;
   border: none;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+a[type="submit"]:hover {
+  background-color: grey;
+  color: #f3e4ca;
+  text-decoration: none;
 }
 
 /* Style the container/contact section */
 .backgroundOfContact {
-  background-color: #f3e4ca;
+  background-color:#a47e3c;
+  color: #f3e4ca;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   padding: 10px;
   padding-top: 60px;
 }
@@ -150,17 +173,16 @@ input[type="submit"]:hover {
   clear: both;
 }
 
+.pushBack {
+  margin-bottom: 121.5px;
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  input[type="submit"] {
+  a[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
-}
-
-footer {
-  background-color: #a47e3c;
-  padding: 25px;
 }
 
 .pushBack {

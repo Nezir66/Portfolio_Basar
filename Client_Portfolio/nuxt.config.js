@@ -16,6 +16,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
+      { rel: "stylesheet", href: "/css/app.css" },
       { rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" },
       { rel:"stylesheet", href:"/css/all.css" },
       { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"}
@@ -28,6 +29,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: "~/plugins/vueCarousel-3D.js", ssr: false }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

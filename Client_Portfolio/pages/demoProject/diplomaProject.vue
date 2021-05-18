@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 100px; padding-left: 20%">
-    <a
-      href="/"
+    <nuxt-link
+      to="/"
       style="
         float: left;
         margin-left: -23%;
@@ -10,7 +10,7 @@
         transform: scale(3);
       "
       ><i class="fa fa-home"></i
-    ></a>
+    ></nuxt-link>
     <img
       src="~/assets/Plakat-1.png"
       alt="Diploma Project PDF"
